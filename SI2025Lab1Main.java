@@ -76,6 +76,8 @@ class TaskManager {
     // 3. List tasks sorted by name
     public void sortTasksByName() {
         // TODO: Implement sorting logic
+        tasks.sort(Comparator.comparing(Task::getName));
+
     }
 
     // 4. Sort tasks by priority
@@ -147,6 +149,8 @@ public class SI2025Lab1Main {
         for (Task task : manager.getMostUrgentTasks()) {
             System.out.println(task);
         }
+
+        manager.sortTasksByName();
         manager.printTasks();
     }
 }
